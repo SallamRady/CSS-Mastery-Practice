@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Background properities
+  background-color
+  background-image
+  background-repeat
+  background-attachment
+  background-position
+  * Text properities
+  color
+  direction
+  letter-spacing
+  line-height
+  text-align
+  text-decoration
+  text-indent
+  text-overflow
+  word-wrap
+  * Font Properities
+  font-size
+  font-weight
+  font-family
+  font-style
+  * Dimentions Properities
+  height
+  width
+  min-height
+  min-width
+  * List Properities
+  list-style-position
+  list-style-type
+  list-style-image
+  * Border
+  border: [width] [style] [color];
+  border-color: [top right bottom left] ;
+  border-top: [top right bottom left] ;
+  border-width: [top right bottom left] ;
+  border-style: [top right bottom left] ;
+  * Box-model properities
+  box-sizing
+  * Margin
+  margin: [numberForAll or [top right bottom left]];
+  margin-[direction]: [numberForAll or [top right bottom left]];
+  * Padding
+  padding: [numberForAll or [top right bottom left]];
+  padding-[direction]: [numberForAll or [top right bottom left]];
+*/
+.main-container {
+  background-image: url("./assets/bg-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 1600px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-container .box {
+  width: 300px;
+  height: 300px;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid lightgray;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 3px red;
+  /* transform: rotateX(100deg); */
+}
+
+.main-container .box h4 {
+  color: rgb(250, 92, 0);
+  direction: ltr;
+  letter-spacing: 2px;
+  line-height: 3px;
+  text-align: left;
+  text-decoration: underline;
+  text-indent: 50px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.main-container .box h4::first-letter {
+  color: rebeccapurple;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-style: oblique;
+}
+
+.main-container .box a {
+  font-weight: bolder;
+  transition: all 0.3s ease;
+}
+.main-container .box a:hover {
+  color: orange;
+}
+.main-container .box a:active {
+  color: orangered;
+}
+
+.main-container .box div .demo-list {
+  list-style-type: none;
+}
+
+.main-container .box div .demo-list li{
+    display: inline-block;
+}
