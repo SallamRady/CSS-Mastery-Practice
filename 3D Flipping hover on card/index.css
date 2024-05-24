@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: monospace;
+}
+
+.card {
+  width: 22rem;
+  cursor: pointer;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  transition: all 2s;
+  padding: 10rem;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 2rem;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background-color: #212121;
+  color: #fff;
+}
+
+.front h1 {
+  transform: translateZ(5rem);
+  font-size: 2rem;
+  margin-top: 35%;
+}
+
+.back {
+  transform: rotateY(0.5turn);
+}
+
+.back p {
+  transform: translateZ(5rem);
+}
+
+.card:hover .content {
+  transform: rotateY(0.5turn);
+}
