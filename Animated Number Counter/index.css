@@ -1,0 +1,60 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #00092f;
+}
+
+.wrapper {
+  font-size: 150px;
+  font-weight: bolder;
+  line-height: 1em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.number-area {
+  display: inline-block;
+  overflow: hidden;
+  width: 0.6em;
+  height: 1em;
+  padding: 0.6rem;
+  text-shadow: 0 4px 8px rgba(0, 245, 245, 0.9);
+  color: #e3e3e3;
+}
+
+.num {
+  font: inherit;
+  word-break: break-all;
+  display: block;
+  width: 0;
+  padding: 0 1.6em 0 0;
+  margin: 0 auto;
+  overflow: inherit;
+  animation: animate 0.5s steps(10) forwards infinite;
+}
+
+.num::before {
+  content: attr(data-attr);
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes animate {
+  100% {
+    transform: translate3d(0, -10em, 0);
+  }
+}
+
+.n1 {
+  animation-iteration-count: 4;
+}
+
+.n2 {
+  animation-iteration-count: 8;
+}
+
+.n3 {
+  animation-iteration-count: 12;
+}
