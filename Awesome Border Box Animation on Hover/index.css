@@ -1,0 +1,83 @@
+body {
+  font-family: poppins;
+  background-color: darkturquoise;
+}
+
+.services {
+  width: 95%;
+  margin: 12% auto;
+}
+
+.singleBox {
+  width: 24%;
+  height: auto;
+  float: left;
+  color: #fff;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 35px;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.singleBox h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.singleBox h5 {
+  margin: 15px 0 0;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.singleBox p {
+  font-size: 14px;
+}
+
+.singleBox:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.singleBox:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 4px;
+  width: 100%;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.singleBox:hover:before {
+  border-color: #fff;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear;
+}
+
+.singleBox:hover:after {
+  border-color: #fff;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear;
+}
+
+.singleBox:hover {
+  transition: 8s;
+}
